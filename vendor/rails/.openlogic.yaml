@@ -1,0 +1,19 @@
+--- 
+name: Rails 2.3.5 Source
+platform_id: all
+platform_version: all
+distribution_file_uuid_string: openlogic-rails-2.3.5-all-src-1
+platform_vendor: all
+version_visibility: public
+description: Rails 2.3.5 Source
+platform_arch: all
+distribution_file_uuid: 21d12582210de3385d987c4245fe3f7a94f568122022ba7849f7cb580b877f1e
+distribution_version: 1
+distribution_flavor: ""
+distribution_raw_file: 2.3.5/rails-rails-c1fd653.tar.gz
+notify: "yes"
+package_version: 2.3.5
+package_id: rails
+release_date: "2010-03-23"
+distribution_notes: ""
+distribution_type: src
