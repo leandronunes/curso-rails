@@ -1,20 +1,17 @@
-<h1>Editing post</h1>
-
 <% form_for(@post) do |f| %>
+  <legend>Editing post</legend>
+
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+  <%= f.label :title %>
+  <%= f.text_field :title, :class=> "input-xxlarge" %>
+  <%= f.label :content %>
+  <%= f.text_area :content, :class=> "input-xxlarge" %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+  <br/>
+
+  <%= f.submit "Update", :class => 'btn btn-primary btn-large' %>
+  <%= link_to 'Show', @post %> |
+  <%= link_to "Back", posts_path %>
+    
+<% end %>
