@@ -1,13 +1,20 @@
+<%= render :partial => @post %>
 <p>
-  <b>Title:</b>
-  <%=h @post.title %>
+  <%= link_to 'Editar', edit_post_path(@post) %>
+  <%= link_to 'Destroy', @post, :confirm => 'Você tem certeza?', :method => :delete %>
+  <%= link_to 'Ver todos', posts_path %>
 </p>
 
-<p>
-  <b>Content:</b>
-  <%=h @post.content %>
-</p>
+<h2> Comentários: </h2>
 
+<div id="comments">
+  <%= render :partial => @post.comments %>  
+</div >
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<% form_for [@post, Comment.new] do |f| %>
+  <p>
+    <%= f.label :body, "Novo comentário"%> <br/>
+    <%= f.text_area :body %>
+  </p>
+  <p> <%= f.submit "Adicionar Comentário" %> </p>
+<% end %>
