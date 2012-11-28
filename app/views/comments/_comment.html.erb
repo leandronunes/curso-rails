@@ -1,6 +1,6 @@
 <% div_for comment do %>
   <p>
-    <strong> Criado em <%= time_ago_in_words(comment.created_at) %> </strong> <br/>
+    <strong> Created at <%= time_ago_in_words(comment.created_at) %> </strong> <%= link_to_remote 'Delete', :url => post_comment_path(@post, comment), :method => :delete %><br/>
     <%= h(comment.body)%>
   </p>
 <% end %>
