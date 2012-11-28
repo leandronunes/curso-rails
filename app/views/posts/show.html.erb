@@ -1,8 +1,8 @@
 <%= render :partial => @post %>
 <p>
   <%= link_to 'Editar', edit_post_path(@post) %>
-  <%= link_to 'Destroy', @post, :confirm => 'Você tem certeza?', :method => :delete %>
-  <%= link_to 'Ver todos', posts_path %>
+  <%= link_to 'Destroy', @post, :confirm => 'Are you sure?', :method => :delete %>
+  <%= link_to 'See all', posts_path %>
 </p>
 
 <h2> Comentários: </h2>
@@ -13,8 +13,8 @@
 
 <% form_for [@post, Comment.new] do |f| %>
   <p>
-    <%= f.label :body, "Novo comentário"%> <br/>
+    <%= f.label :body, "New Comment"%> <br/>
     <%= f.text_area :body %>
   </p>
-  <p> <%= f.submit "Adicionar Comentário" %> </p>
+  <p> <%= f.submit "Add Comment" %> </p>
 <% end %>
